@@ -39,9 +39,9 @@ public class ProgramaPrincipal {
         finca2.addPiscina(800, true, 20000);
         finca2.addJardin(30, 2);
 
-        finca2.addChalet("DescripcionChalet2", "Sevilla", 140, 6, 20000);
+        // finca2.addChalet("DescripcionChalet2", "Sevilla", 140, 6, 20000);
         finca2.addAdosado("DescripcionAdosado2", "Valencia", 512, 23, 800000, 82, 54);
-        finca2.addApartamento("DescripcionApartamento2", "Galicia", 241, 8, 10004, false);
+        // finca2.addApartamento("DescripcionApartamento2", "Galicia", 241, 8, 10004, false);
 
 
 
