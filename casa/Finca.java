@@ -1,7 +1,7 @@
 package casa;
 
 // ! CLASE FINCA
-public class Finca {
+public class Finca extends Propiedad {
 
     // ! Atributos
     private String nombre;

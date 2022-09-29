@@ -2,7 +2,7 @@ Propietario [
     direccion=Palma,
     nombre=Marcos,
     nif=123456789K,
-    fincas=
+    propiedades=
         Finca [
             nombre=NombreDeFinca,
             tipo=rustico,
@@ -24,7 +24,7 @@ Propietario [
             ]
         ],
         Finca [
-            nombre=NombreDeFinca2,                                // ! Pregunta para Jumi
+            nombre=NombreDeFinca2,
             tipo=urbano,
             direccion=Madrid,
             superficie159.0,
@@ -55,8 +55,7 @@ Propietario [
                 plantas=2,
                 superficie=30.0
             ]
-    ],
-    viviendas=
+        ],
         Chalet [
             Vivienda [
                 descripcion=DescripcionChalet,

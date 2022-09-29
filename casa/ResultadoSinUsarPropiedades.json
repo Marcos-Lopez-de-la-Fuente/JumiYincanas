@@ -1,0 +1,101 @@
+Propietario [
+    direccion=Palma,
+    nombre=Marcos,
+    nif=123456789K,
+    fincas=
+        Finca [
+            nombre=NombreDeFinca,
+            tipo=rustico,
+            direccion=Manacor,
+            superficie134.0,
+            valor=80000,
+            huerto=Huerto [
+                riego_por_goteo=true,
+                superficie=20.0
+            ],
+            piscina=Piscina [
+                cloracion_salina=true,
+                valor=5000,
+                volumen=500.0
+            ],
+            jardin=Jardin [
+                plantas=10,
+                superficie=30.0
+            ]
+        ],
+        Finca [
+            nombre=NombreDeFinca2,
+            tipo=urbano,
+            direccion=Madrid,
+            superficie159.0,
+            valor=500000,
+            vivienda=Adosado [
+                Vivienda [
+                    descripcion=DescripcionAdosado2,
+                    direccion=Valencia,
+                    superficie=512.0,
+                    nro_habitaciones=23,
+                    valor=800000
+                ],
+                jardin=Jardin [
+                    plantas=54,
+                    superficie=82.0
+                ]
+            ],
+            huerto=Huerto [
+                riego_por_goteo=true,
+                superficie=20.0
+            ],
+            piscina=Piscina [
+                cloracion_salina=true,
+                valor=20000,
+                volumen=800.0
+            ],
+            jardin=Jardin [
+                plantas=2,
+                superficie=30.0
+            ]
+    ],
+    viviendas=
+        Chalet [
+            Vivienda [
+                descripcion=DescripcionChalet,
+                direccion=Mallorca,
+                superficie=253.0,
+                nro_habitaciones=5,
+                valor=10000
+            ],
+            piscina=Piscina [
+                cloracion_salina=false,
+                valor=8000,
+                volumen=300.0
+            ],
+            jardin=Jardin [
+                plantas=1,
+                superficie=25.0
+            ]
+        ],
+        Adosado [
+            Vivienda [
+                descripcion=DescripcionAdosado,
+                direccion=Menorca,
+                superficie=100.0,
+                nro_habitaciones=3,
+                valor=90000
+            ],
+            jardin=Jardin [
+                plantas=3,
+                superficie=10.0
+            ]
+        ],
+        Apartamento [
+            Vivienda [
+                descripcion=DescripcionApartamento,
+                direccion=Ibiza,
+                superficie=40.0,
+                nro_habitaciones=2,
+                valor=300000
+            ],
+            balcon=true
+    ]
+]

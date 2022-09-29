@@ -9,8 +9,7 @@ public class Propietario {
     private String nif;
     private String nombre;
     private String direccion;
-    private ArrayList<Finca> fincas = new ArrayList<>();
-    private ArrayList<Vivienda> viviendas = new ArrayList<>();
+    private ArrayList<Propiedad> propiedades = new ArrayList<>();
 
 
 
@@ -27,17 +26,10 @@ public class Propietario {
 
     // ! Añadir una nueva vivienda o finca a sus atributos "ArrayList" correspondientes
     /** 
-     * @param vivienda
+     * @param propiedad
      */
-    public void add_vivienda(Vivienda vivienda) {
-        this.viviendas.add(vivienda);
-    }
-
-    /** 
-     * @param finca
-     */
-    public void add_finca(Finca finca) {
-        this.fincas.add(finca);
+    public void add_propiedad(Propiedad propiedad) {
+        this.propiedades.add(propiedad);
     }
 
 
@@ -48,17 +40,10 @@ public class Propietario {
      * @return String
      */
     public String show() {
-        String resultado = ", fincas=";
-        for (int i = 0; i < this.fincas.size(); i++) {
-            resultado += this.fincas.get(i).show();
-            if (i < this.fincas.size() - 1) {
-                resultado += ", ";
-            }
-        }
-        resultado += ", viviendas=";
-        for (int i = 0; i < this.viviendas.size(); i++) {
-            resultado += this.viviendas.get(i).show();
-            if (i < this.viviendas.size() - 1) {
+        String resultado = ", propiedades=";
+        for (int i = 0; i < this.propiedades.size(); i++) {
+            resultado += this.propiedades.get(i).show();
+            if (i < this.propiedades.size() - 1) {
                 resultado += ", ";
             }
         }
@@ -74,11 +59,8 @@ public class Propietario {
      */
     public Integer get_valor() {
         Integer sumaValores = 0;
-        for (int i = 0; i < this.fincas.size(); i++) {
-            sumaValores += this.fincas.get(i).get_valor();
-        }
-        for (int i = 0; i < this.viviendas.size(); i++) {
-            sumaValores += this.viviendas.get(i).get_valor();
+        for (int i = 0; i < this.propiedades.size(); i++) {
+            sumaValores += this.propiedades.get(i).get_valor();
         }
         return sumaValores;
     }

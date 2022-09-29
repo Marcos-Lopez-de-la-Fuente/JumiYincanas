@@ -1,7 +1,7 @@
 package casa;
 
 // ! CLASE ABSTRACTA VIVIENDA
-public abstract class Vivienda {
+public abstract class Vivienda extends Propiedad {
 
     // ! Atributos
     private String descripcion;

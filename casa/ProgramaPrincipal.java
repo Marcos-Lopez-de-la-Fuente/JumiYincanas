@@ -23,8 +23,8 @@ public class ProgramaPrincipal {
 
 
         // ! AÑADIR LAS FINCAS A SUS PROPIETARIOS
-        propietario1.add_finca(finca1);
-        propietario1.add_finca(finca2);
+        propietario1.add_propiedad(finca1);
+        propietario1.add_propiedad(finca2);
 
 
 
@@ -47,9 +47,9 @@ public class ProgramaPrincipal {
 
 
         // ! AÑADIR LAS VIVIENDAS A SUS PROPIETARIOS
-        propietario1.add_vivienda(chalet1);
-        propietario1.add_vivienda(adosado1);
-        propietario1.add_vivienda(apartamento1);
+        propietario1.add_propiedad(chalet1);
+        propietario1.add_propiedad(adosado1);
+        propietario1.add_propiedad(apartamento1);
 
 
 
