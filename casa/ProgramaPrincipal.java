@@ -67,6 +67,6 @@ public class ProgramaPrincipal {
         System.out.println();
         System.out.println("Valor de todas las propiedades: " + propietario1.get_valor());
 
-
+        
     }
 }
