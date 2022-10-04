@@ -67,6 +67,15 @@ public class ProgramaPrincipal {
         System.out.println();
         System.out.println("Valor de todas las propiedades: " + propietario1.get_valor());
 
-        
+        System.out.println();
+
+
+        Propiedad propiedad1 = new Propiedad("DescripcionPropiedad1", 5000);
+        Vivienda vivienda1 = new Vivienda("DescripciónVivienda1", "Manacor", 100, 5, 80000);
+
+        System.out.println(propiedad1.show());
+        System.out.println(propiedad1.get_valor());
+        System.out.println(vivienda1.show());
+        System.out.println(vivienda1.get_valor());
     }
 }

@@ -19,11 +19,11 @@ public class Finca extends Propiedad {
 
     // ! Constructor
     public Finca(String nombre, Tipo tipo, String direccion, float superficie, Integer valor) {
+        super(direccion, valor);
         this.nombre = nombre;
         this.tipo = tipo;
         this.direccion = direccion;
         this.superficie = superficie;
-        this.valor = valor;
     }
 
 
@@ -59,7 +59,7 @@ public class Finca extends Propiedad {
      * @return Integer
      */
     public Integer get_valor () {
-        Integer sumaValores = this.valor;
+        Integer sumaValores = super.get_valor();
         if (this.vivienda != null) {
             sumaValores += this.vivienda.get_valor();
         }

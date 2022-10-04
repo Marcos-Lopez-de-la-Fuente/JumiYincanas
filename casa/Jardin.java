@@ -1,7 +1,7 @@
 package casa;
 
 // ! CLASE JARDIN
-public class Jardin {
+public class Jardin implements Valorable {
 
     // ! Atributos
     private float superficie;

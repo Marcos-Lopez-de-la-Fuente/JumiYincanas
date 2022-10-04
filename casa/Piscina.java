@@ -1,7 +1,7 @@
 package casa;
 
 // ! CLASE PISCINA
-public class Piscina {
+public class Piscina implements Valorable {
 
     // ! Atributos
     private float volumen;

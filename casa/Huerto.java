@@ -1,7 +1,7 @@
 package casa;
 
 // ! CLASE HUERTO
-public class Huerto {
+public class Huerto implements Valorable {
 
     // ! Atributos
     private float superficie;
