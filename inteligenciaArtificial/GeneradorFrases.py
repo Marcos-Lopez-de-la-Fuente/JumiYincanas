@@ -25,7 +25,7 @@ for frase in frases:
 
 
 
-for i in range(100):
+for i in range(1,101):
     cierreDelBucle = True
     while cierreDelBucle:
         nuevaFrase = ""
@@ -45,5 +45,5 @@ for i in range(100):
                 fraseRepetida = True
         if not fraseRepetida:
             cierreDelBucle = False
-    print(i,nuevaFrase)
+    print(i, "-->", nuevaFrase)
 
