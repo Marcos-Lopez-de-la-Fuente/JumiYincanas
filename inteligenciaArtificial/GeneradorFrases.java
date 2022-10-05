@@ -19,7 +19,7 @@ public class GeneradorFrases {
     public static void main(String[] args) {
         
         try {
-            File file1 = new File("C:/Users/monoq/Desktop/Workspace/DAM/DAM2/JumiYincanas/inteligenciaArtificial/star_wars.txt");
+            File file1 = new File("C:/Users/marco/Desktop/Workspace/DAM/DAM2/JumiYincanas/inteligenciaArtificial/prueba.txt");
             ArrayList<String> frases = leerBufferTexto(file1);
 
             HashMap<String, ArrayList<String>> hashMap = new HashMap<String, ArrayList<String>>();
@@ -28,9 +28,9 @@ public class GeneradorFrases {
 
 
             for (int i = 0; i < frases.size(); i++) {
-                List<String> frase = separadorPalabras(frases.get(i), 3);
+                List<String> frase = separadorPalabras(frases.get(i), 1);
 
-                System.out.println(frase);
+                // System.out.println(frase);
 
                 if (!hashMap.containsKey("start-start-start")) {
                     ArrayList<String> valueHashMap = new ArrayList<String>();

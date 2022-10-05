@@ -1,5 +1,5 @@
 import random
-frases = open(r"C:\Users\monoq\Desktop\Workspace\DAM\DAM2\JumiYincanas\inteligenciaArtificial\prueba.txt")
+frases = open(r"C:\Users\marco\Desktop\Workspace\DAM\DAM2\JumiYincanas\inteligenciaArtificial\star_wars.txt")
 markov_chain = {}
 
 
@@ -39,7 +39,7 @@ for i in range(1,101):
             estado = nuevaPalabra
         nuevaFrase = nuevaFrase[1:]
         fraseRepetida = False
-        frases = open(r"C:\Users\monoq\Desktop\Workspace\DAM\DAM2\JumiYincanas\inteligenciaArtificial\prueba.txt")
+        frases = open(r"C:\Users\marco\Desktop\Workspace\DAM\DAM2\JumiYincanas\inteligenciaArtificial\star_wars.txt")
         for frase in frases:
             if nuevaFrase == frase.strip('\n'):
                 fraseRepetida = True
