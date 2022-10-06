@@ -151,34 +151,34 @@ public class GeneradorFrasesActualizado {
         List<String> respuesta = new ArrayList<String>();
         int contadorPalabras = 0;
         String palabras = "";
-            for (int i = 0; i < porPalabras.size(); i++) {
-                if (contadorPalabras != 0) {
-                    palabras = palabras + " ";
+        for (int i = 0; i < porPalabras.size(); i++) {
+            if (contadorPalabras != 0) {
+                palabras = palabras + " ";
+            }
+            if (contadorPalabras == 0 && i + 1 == porPalabras.size()) {
+                respuesta.add(porPalabras.get(i));
+                i = porPalabras.size();
+            }
+            if (contadorPalabras == 0 && i + 2 == porPalabras.size() && cadaXPalabras == 3) {
+                palabras = porPalabras.get(i) + " " + porPalabras.get(i + 1);
+                respuesta.add(palabras);
+                palabras = "";
+                i = porPalabras.size();
+            }
+            else if (contadorPalabras + 1 < cadaXPalabras) {
+                if (i < porPalabras.size()) {
+                    palabras = palabras + porPalabras.get(i);
+                    contadorPalabras++;
                 }
-                if (contadorPalabras == 0 && i + 1 == porPalabras.size()) {
-                    respuesta.add(porPalabras.get(i));
-                    i = porPalabras.size();
-                }
-                if (contadorPalabras == 0 && i + 2 == porPalabras.size() && cadaXPalabras == 3) {
-                    palabras = porPalabras.get(i) + " " + porPalabras.get(i + 1);
+            } else {
+                if (i < porPalabras.size()) {
+                    palabras = palabras + porPalabras.get(i);
                     respuesta.add(palabras);
                     palabras = "";
-                    i = porPalabras.size();
-                }
-                else if (contadorPalabras + 1 < cadaXPalabras) {
-                    if (i < porPalabras.size()) {
-                        palabras = palabras + porPalabras.get(i);
-                        contadorPalabras++;
-                    }
-                } else {
-                    if (i < porPalabras.size()) {
-                        palabras = palabras + porPalabras.get(i);
-                        respuesta.add(palabras);
-                        palabras = "";
-                        contadorPalabras = 0;
-                    }
+                    contadorPalabras = 0;
                 }
             }
+        }
         return respuesta;
     }
 

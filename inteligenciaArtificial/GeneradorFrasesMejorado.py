@@ -74,6 +74,49 @@ def crearDiccionario(frases): # ! Crea un diccionario recorriendo todas las fras
 
 
 
+def crearDiccionarioDosPalabrasPRUEBA(frases):
+
+
+    for frase in frases:
+        porPalabras = frase.split(" ")
+        respuesta = []
+
+        contadorPalabras = 0
+        palabras = ""
+
+        for palabra in porPalabras:
+            if contadorPalabras != 0:
+                palabras = palabras + " "
+            
+            if contadorPalabras == 0 and palabra == porPalabras[len(porPalabras) - 1]:
+                respuesta.append(palabra)
+            
+
+            if contadorPalabras + 1 < 2:
+                if palabra != porPalabras[len(porPalabras) - 1]:
+                    palabras = palabras + palabra
+                    contadorPalabras += 1
+            
+            else:
+                if palabra != porPalabras[len(porPalabras) - 1]:
+                    palabras = palabras + palabra
+                    respuesta.append(palabras)
+                    palabras = ""
+                    contadorPalabras = 0
+
+
+
+
+
+
+
+        print("4.",respuesta)
+
+
+
+
+
+
 def generadorDeFrases(diccionario, frases): # TODO Preguntar a Jumi que partes se pueden acortar
     frasesGeneradasArray = []
     for i in range(1,101): # Se generarán 100 frases
@@ -116,6 +159,7 @@ def generadorDeFrases(diccionario, frases): # TODO Preguntar a Jumi que partes s
 
 archivoLeido = leerArchivo("C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\inteligenciaArtificial\\prueba.txt")
 
+crearDiccionarioDosPalabrasPRUEBA(archivoLeido)
 
 diccionario = crearDiccionario(archivoLeido)
 
