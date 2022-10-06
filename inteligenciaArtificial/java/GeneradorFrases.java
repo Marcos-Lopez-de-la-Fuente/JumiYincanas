@@ -1,4 +1,4 @@
-package inteligenciaArtificial;
+package inteligenciaArtificial.java;
 
 import java.io.File;
 import java.io.FileReader;
@@ -62,7 +62,7 @@ public class GeneradorFrases {
             }
 
 
-
+System.out.println(hashMap);
 
             String nuevaFrase = "";
             for (int i = 1; i <= 100; i++) {

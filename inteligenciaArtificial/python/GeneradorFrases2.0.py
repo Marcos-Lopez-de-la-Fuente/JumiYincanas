@@ -41,10 +41,14 @@ def imprimirArrayStrings(arrayStrings): # ! Imprimir un Array de Strings
 
 
 
+
+
 def comprobarKeyDiccionario(estado, diccionario): # ! Comprueba si el "estado" existe como "key" en el "diccionario", en caso negativo lo crea con un valor "[]"
     if estado not in diccionario.keys(): # Si el estado no se ha almacenado anteriormente como "key"
         diccionario[estado] = [] # Se añade el estado con un Array vacio
     return diccionario
+
+
 
 
 
@@ -70,47 +74,6 @@ def crearDiccionario(frases): # ! Crea un diccionario recorriendo todas las fras
         diccionario[estado].append("end-end-end") # Se añade "end-end-end" al Array de la "key" "estado" (Última palabra de la frase)
 
     return diccionario
-
-
-
-
-def crearDiccionarioDosPalabrasPRUEBA(frases):
-
-
-    for frase in frases:
-        porPalabras = frase.split(" ")
-        respuesta = []
-
-        contadorPalabras = 0
-        palabras = ""
-
-        for palabra in porPalabras:
-            if contadorPalabras != 0:
-                palabras = palabras + " "
-            
-            if contadorPalabras == 0 and palabra == porPalabras[len(porPalabras) - 1]:
-                respuesta.append(palabra)
-            
-
-            if contadorPalabras + 1 < 2:
-                if palabra != porPalabras[len(porPalabras) - 1]:
-                    palabras = palabras + palabra
-                    contadorPalabras += 1
-            
-            else:
-                if palabra != porPalabras[len(porPalabras) - 1]:
-                    palabras = palabras + palabra
-                    respuesta.append(palabras)
-                    palabras = ""
-                    contadorPalabras = 0
-
-
-
-
-
-
-
-        print("4.",respuesta)
 
 
 
@@ -157,9 +120,9 @@ def generadorDeFrases(diccionario, frases): # TODO Preguntar a Jumi que partes s
 # ! MAIN
 
 
-archivoLeido = leerArchivo("C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\inteligenciaArtificial\\prueba.txt")
+archivoLeido = leerArchivo("C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\inteligenciaArtificial\\star_wars.txt")
 
-crearDiccionarioDosPalabrasPRUEBA(archivoLeido)
+crearDiccionario(archivoLeido)
 
 diccionario = crearDiccionario(archivoLeido)
 
@@ -168,4 +131,42 @@ frasesGeneradas = generadorDeFrases(diccionario, archivoLeido)
 
 
 imprimirArrayStrings(frasesGeneradas)
+
+
+
+
+
+
+
+# def crearDiccionarioDosPalabrasPRUEBA(frases):
+
+
+#     for frase in frases:
+#         porPalabras = frase.split(" ")
+#         respuesta = []
+
+#         contadorPalabras = 0
+#         palabras = ""
+
+#         for palabra in porPalabras:
+#             if contadorPalabras != 0:
+#                 palabras = palabras + " "
+            
+#             if contadorPalabras == 0 and palabra == porPalabras[len(porPalabras) - 1]:
+#                 respuesta.append(palabra)
+            
+
+#             if contadorPalabras + 1 < 2:
+#                 if palabra != porPalabras[len(porPalabras) - 1]:
+#                     palabras = palabras + palabra
+#                     contadorPalabras += 1
+            
+#             else:
+#                 if palabra != porPalabras[len(porPalabras) - 1]:
+#                     palabras = palabras + palabra
+#                     respuesta.append(palabras)
+#                     palabras = ""
+#                     contadorPalabras = 0
+
+#         print("4.",respuesta)
 

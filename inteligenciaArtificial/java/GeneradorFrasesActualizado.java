@@ -1,4 +1,4 @@
-package inteligenciaArtificial;
+package inteligenciaArtificial.java;
 
 import java.io.File;
 import java.io.FileReader;
