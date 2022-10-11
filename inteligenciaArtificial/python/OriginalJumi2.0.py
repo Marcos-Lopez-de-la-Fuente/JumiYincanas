@@ -113,7 +113,7 @@ def read_sentences_from_a_file(file_name):
 ###
 
 
-sentences = read_sentences_from_a_file("C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\inteligenciaArtificial\\textos\\Star_wars.txt")
+sentences = read_sentences_from_a_file("C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\inteligenciaArtificial\\textos\\Star_wars.txt")
 chain = create_multipart_state_chain(sentences, 3)
 num_new_sentences = 0
 new_sentences = []

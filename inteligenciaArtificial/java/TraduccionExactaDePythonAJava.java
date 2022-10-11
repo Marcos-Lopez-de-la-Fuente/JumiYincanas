@@ -113,7 +113,7 @@ public class TraduccionExactaDePythonAJava {
 
     public static void main(String[] args) {
         try {
-            ArrayList<String> sentences = read_sentences_from_a_file("C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\inteligenciaArtificial\\textos\\Star_wars.txt");
+            ArrayList<String> sentences = read_sentences_from_a_file("C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\inteligenciaArtificial\\textos\\Star_wars.txt");
 
             HashMap<String, ArrayList<String>> chain = create_multipart_state_chain(sentences, 3);
 
@@ -125,7 +125,7 @@ public class TraduccionExactaDePythonAJava {
 
                 if (is_new_sentence(sentences, new_sentence)) {
                     if (is_new_sentence(new_sentences, new_sentence)) {
-                        num_new_sentences += 1;
+                        num_new_sentences++;
                         new_sentences.add(new_sentence);
                     }
                 }
