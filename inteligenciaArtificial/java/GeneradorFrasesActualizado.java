@@ -7,10 +7,6 @@ import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import java.util.Random;
-
-import javax.sound.midi.Synthesizer;
-
 import java.util.Arrays;
 import java.util.List;
 

@@ -2,7 +2,6 @@ package inteligenciaartificial.java;
 
 import java.io.File;
 import java.io.FileReader;
-import java.rmi.server.SocketSecurityException;
 import java.io.BufferedReader;
 
 import java.util.ArrayList;
