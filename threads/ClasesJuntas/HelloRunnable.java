@@ -1,4 +1,4 @@
-package threads.ClasesJuntas;
+package threads.clasesjuntas;
 
 public class HelloRunnable implements Runnable {
 

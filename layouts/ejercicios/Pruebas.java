@@ -19,11 +19,22 @@ import java.awt.event.ActionListener;
 // TODO FALTA SEPARAR EN DIFERENTES MÉTODOS Y COMENTAR CORRECTAMENTE
 // TODO Tengo que intentar a quitar la mayor parte del código posible para ver si es necesaria o el programa funciona perfectamente sin el y solo es basura que he escrito entre varias pruebas
 public class Pruebas extends JFrame implements ActionListener {
-    
+
     private JTextArea area; // Area donde se puede introducir texto
     private JScrollPane scroll; // Barra de desplazamiento
     private JTextField texto; // Input de texto (Zona donde puedes introducir texto)
     private JButton boton; // Boton
+
+
+
+
+
+
+
+
+
+
+
 
 
     public Pruebas () {
@@ -35,7 +46,7 @@ public class Pruebas extends JFrame implements ActionListener {
 
         this.area = new JTextArea();
         this.scroll = new JScrollPane(this.area); // Gracias a esta línea conseguimos el el (this.area) tenga un scroll
-        this.texto = new JTextField(20); // ! 20 columnas
+        this.texto = new JTextField();
         this.boton = new JButton("Enviar");
 
 

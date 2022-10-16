@@ -1,4 +1,4 @@
-package threads.ClasesJuntas;
+package threads.clasesjuntas;
 
 public class ProgramaMain {
     public static void main(String args[]) {
