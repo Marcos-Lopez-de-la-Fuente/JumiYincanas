@@ -33,9 +33,9 @@ def add_sentence(sentences, new_sentence):
 def add_word_to_chain(chain, state, word):
     if chain.get(state) == None:
         # Primera palabra que tiene este estado -> Hay que crear la lista
-        chain[state] = [word]
-    else:
-        chain[state].append(word)
+        chain[state] = []
+
+    chain[state].append(word)
 
 
 def create_initial_state(state_parts):
@@ -75,6 +75,7 @@ def create_sentence(chain, state_parts=2):
             break
 
         word_list.append(word)
+
         state = compose_multipart_state(state_parts, word_list[-state_parts:])
 
     return " ".join(word_list)
@@ -112,11 +113,11 @@ def read_sentences_from_a_file(file_name):
 ###
 
 
-sentences = read_sentences_from_a_file("C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\inteligenciaArtificial\\textos\\star_wars.txt")
+sentences = read_sentences_from_a_file("C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\inteligenciaArtificial\\textos\\Star_wars.txt")
 chain = create_multipart_state_chain(sentences, 3)
 num_new_sentences = 0
 new_sentences = []
-while num_new_sentences < 20:
+while num_new_sentences < 100:
     new_sentence = create_sentence(chain, 3)
 
     if is_new_sentence(sentences, new_sentence):

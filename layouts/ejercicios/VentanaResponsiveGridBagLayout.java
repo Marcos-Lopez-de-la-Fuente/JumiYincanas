@@ -231,7 +231,7 @@ public class VentanaResponsiveGridBagLayout extends JFrame implements ActionList
 
     public static void main(String[] args) {
         VentanaResponsiveGridBagLayout ventanaResponsiveGridBagLayout = new VentanaResponsiveGridBagLayout();
-        
+        System.out.println(ventanaResponsiveGridBagLayout.toString());
 
     }
 
