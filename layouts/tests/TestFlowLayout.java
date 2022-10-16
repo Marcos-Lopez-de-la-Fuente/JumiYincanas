@@ -1,4 +1,4 @@
-package layouts;
+package layouts.tests;
 
 
 import javax.swing.JFrame;

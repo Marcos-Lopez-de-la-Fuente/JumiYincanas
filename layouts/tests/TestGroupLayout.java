@@ -1,4 +1,4 @@
-package layouts;
+package layouts.tests;
 
 // Java Program to illustrate the GroupLayout class
 import javax.swing.*;

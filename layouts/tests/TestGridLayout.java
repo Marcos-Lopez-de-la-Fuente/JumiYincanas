@@ -1,4 +1,4 @@
-package layouts;
+package layouts.tests;
 
 import java.awt.GridLayout;
 import javax.swing.JButton;

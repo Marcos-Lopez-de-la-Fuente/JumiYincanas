@@ -1,4 +1,4 @@
-package layouts;
+package layouts.tests;
 
 // Java program to show Example of CardLayout.
 // in java. Importing different Package.

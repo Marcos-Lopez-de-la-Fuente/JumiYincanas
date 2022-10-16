@@ -1,4 +1,4 @@
-package layouts;
+package layouts.tests;
 /*
  * A swing BoxLayout example with different BoxLayout alignment settings
  * LEFT_ALIGNMENT, CENTER_ALIGNMENT, RIGHT_ALIGNMENT respectively.
