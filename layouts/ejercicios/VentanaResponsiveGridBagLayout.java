@@ -98,7 +98,7 @@ public class VentanaResponsiveGridBagLayout extends JFrame implements ActionList
         // Atributo Scroll del panel lateral donde se introduce el panel de botones creado anteriormente y su tamaño
         this.jScrollPaneBotonesLateral = new JScrollPane(jPanelBotonesLateral, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
         this.jScrollPaneBotonesLateral.setMinimumSize(new Dimension(this.WIDTHJSCROLLPANELLATERAL, this.HEIGHTJSCROLLPANELLATERAL));
-        this.jScrollPaneBotonesLateral.setPreferredSize(new Dimension(160, 1080));
+        this.jScrollPaneBotonesLateral.setPreferredSize(new Dimension(this.WIDTHJSCROLLPANELLATERAL, this.HEIGHTJSCROLLPANELLATERAL));
 
 
         this.jButtonLateral1 = new JButton("Boton 1");
