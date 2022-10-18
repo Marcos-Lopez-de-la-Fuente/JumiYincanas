@@ -15,7 +15,7 @@ import javax.swing.JTextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class VentanaResponsiveGridBagLayout extends JFrame implements ActionListener {
+public class VentanaResponsiveGridBagLayout1 extends JFrame implements ActionListener {
 
     // ! Atributos
     // Atributos del programa principal
@@ -48,7 +48,7 @@ public class VentanaResponsiveGridBagLayout extends JFrame implements ActionList
 
 
     // ! Constructor
-    public VentanaResponsiveGridBagLayout () {
+    public VentanaResponsiveGridBagLayout1 () {
 
         // Llamada al constructor heredado indicando el título de la ventana
         super("VentanaResponsiveGridBagLayout");
@@ -230,7 +230,7 @@ public class VentanaResponsiveGridBagLayout extends JFrame implements ActionList
 
 
     public static void main(String[] args) {
-        VentanaResponsiveGridBagLayout ventanaResponsiveGridBagLayout = new VentanaResponsiveGridBagLayout();
+        VentanaResponsiveGridBagLayout1 ventanaResponsiveGridBagLayout = new VentanaResponsiveGridBagLayout1();
         System.out.println(ventanaResponsiveGridBagLayout.toString());
 
     }

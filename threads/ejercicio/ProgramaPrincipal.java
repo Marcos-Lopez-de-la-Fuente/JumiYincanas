@@ -2,25 +2,8 @@ package threads.ejercicio;
 
 public class ProgramaPrincipal {
     public static void main(String[] args) {
-        Contador contador = new Contador();
-        Productor productor = new Productor(contador);
-        Consumidor consumidor = new Consumidor(contador);
+        System.out.println((new MyTask().doTest()));
 
-        productor.start();
-        consumidor.start();
-
-        try {
-            productor.join();
-            consumidor.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-
-        System.out.println(contador.mostrar());
-        System.out.println(contador.mostrar());
-        System.out.println(contador.mostrar());
-        System.out.println(contador.mostrar());
     }
 
 }
