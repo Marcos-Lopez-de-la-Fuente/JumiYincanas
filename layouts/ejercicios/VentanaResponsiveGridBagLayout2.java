@@ -3,6 +3,7 @@ package layouts.ejercicios;
 import java.awt.GridBagConstraints;
 import java.awt.Dimension;
 import java.awt.GridBagLayout;
+import java.awt.Insets;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,8 +13,6 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import layouts.tests.GridBagLayoutDemo;
-
-import java.awt.BorderLayout;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -29,7 +28,6 @@ public class VentanaResponsiveGridBagLayout2 extends JFrame implements ActionLis
 
     // Atributos del panel lateral
     private JPanel jPanelBotonesLateral;
-    private JPanel jPanelBotonesLatera2;
     private JScrollPane jScrollPaneBotonesLateral;
     private JButton jButtonLateral1;
     private JButton jButtonLateral2;
@@ -47,22 +45,33 @@ public class VentanaResponsiveGridBagLayout2 extends JFrame implements ActionLis
     private final int WIDTHJBOTONESLATERAL = 100;
     private final int HEIGHTJBOTONESLATERAL = 40;
 
+
+
+
+
     // ! Constructor
-    public VentanaResponsiveGridBagLayout2() {
+    public VentanaResponsiveGridBagLayout2 () {
 
         // Llamada al constructor heredado indicando el título de la ventana
-        super("VentanaResponsiveGridBagLayout");
+        super("VentanaResponsiveGridBagLayout2");
 
         // Asignar los valores principales de los atributos
         propiedadesJFrame();
 
-        // Se crea un objeto Constraints para posteriormente indicar las restricciones
-        // de los elementos mediante el método addElementsWithConstraints()
+        // Se crea un objeto Constraints para posteriormente indicar las restricciones de los elementos mediante el método addElementsWithConstraints()
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         this.addElementsWithConstraints(gridBagConstraints);
 
+        // Se añaden Listeners en los elementos necesarios
+        this.addListeners();
+
+
         this.setVisible(true); // Se cambia la visibilidad del objeto para mostrar por pantalla
     }
+
+
+
+
 
     /**
      * ! Crea los valores de los atributos del objeto y de los heredados por JFrame
@@ -70,67 +79,140 @@ public class VentanaResponsiveGridBagLayout2 extends JFrame implements ActionLis
     public void propiedadesJFrame() {
 
         // Atributos heredados por JFrame
-        this.setSize(400, 400);
+        this.setSize(400,400);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new GridBagLayout());
 
-        // Atributo panel lateral donde se introducirán los botones y su tamaño
-        this.jPanelBotonesLateral = new JPanel();
-        this.jPanelBotonesLateral.setLayout(new GridBagLayout());
-        this.jPanelBotonesLateral
-                .setPreferredSize(new Dimension(this.WIDTHJPANELBOTONESLATERAL, this.HEIGHTJPANELBOTONESLATERAL));
 
-        this.jPanelBotonesLatera2 = new JPanel();
-        this.jPanelBotonesLatera2.setLayout(new GridBagLayout());
-        this.jPanelBotonesLatera2
-                .setPreferredSize(new Dimension(this.WIDTHJPANELBOTONESLATERAL, this.HEIGHTJPANELBOTONESLATERAL));
+
+        // Atributos del programa principal
+        this.jTextArea = new JTextArea();
+        this.jScrollPaneDeJTextArea = new JScrollPane(this.jTextArea);
+        this.jTextFieldInputs = new JTextField();
+        this.jButtonUpdateJTextArea = new JButton("Enviar");
+
+
+
+        // Atributo panel lateral donde se introducirán los botones y su tamaño
+        this.jPanelBotonesLateral = new JPanel(new GridBagLayout());
+        this.jPanelBotonesLateral.setPreferredSize(new Dimension(this.WIDTHJPANELBOTONESLATERAL, this.HEIGHTJPANELBOTONESLATERAL));
+
+        // Atributo Scroll del panel lateral donde se introduce el panel de botones creado anteriormente y su tamaño
+        this.jScrollPaneBotonesLateral = new JScrollPane(jPanelBotonesLateral, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        this.jScrollPaneBotonesLateral.setMinimumSize(new Dimension(this.WIDTHJSCROLLPANELLATERAL, this.HEIGHTJSCROLLPANELLATERAL));
+        this.jScrollPaneBotonesLateral.setPreferredSize(new Dimension(this.WIDTHJSCROLLPANELLATERAL, this.HEIGHTJSCROLLPANELLATERAL));
+
 
         this.jButtonLateral1 = new JButton("Boton 1");
         this.jButtonLateral2 = new JButton("Boton 2");
-        // jButtonLateral2.setPreferredSize(new
-        // Dimension(this.WIDTHJBOTONESLATERAL,this.HEIGHTJBOTONESLATERAL));
-        // this.jButtonLateral3 = new JButton("Boton 3");
-        // jButtonLateral3.setPreferredSize(new
-        // Dimension(this.WIDTHJBOTONESLATERAL,this.HEIGHTJBOTONESLATERAL));
-        // this.jButtonLateral4 = new JButton("Boton 4");
-        // jButtonLateral4.setPreferredSize(new
-        // Dimension(this.WIDTHJBOTONESLATERAL,this.HEIGHTJBOTONESLATERAL));
+        this.jButtonLateral3 = new JButton("Boton 3");
+        this.jButtonLateral4 = new JButton("Boton 4");
+
 
     }
+
+
+
+
 
     /**
      * ! Añade los Atributos / Elementos al objeto utilizando Constraints
      * 
-     * @param gridBagConstraints The GridBagConstraints object that will be used to
-     *                           add the elements.
+     * @param gridBagConstraints The GridBagConstraints object that will be used to add the elements.
      */
     public void addElementsWithConstraints(GridBagConstraints gridBagConstraints) {
 
-        GridBagConstraints gridBagConstraints2 = new GridBagConstraints();
-
-        // TODO Aquí tengo que cambiar los valores de this.jButtonLateral1 mediante el
-        // TODO mismo objeto con algun "set" o mediante el objeto "gridBagConstraints2"
-        
-        gridBagConstraints2.fill = GridBagConstraints.HORIZONTAL;
-
-        jPanelBotonesLateral.add(jButtonLateral1, gridBagConstraints2);
-
-
-
-
-        // ! este es el obtro panel con el otro boton para tenerlo como referencia
-        jPanelBotonesLatera2.add(this.jButtonLateral2, gridBagConstraints);
-
-        this.add(this.jPanelBotonesLateral, gridBagConstraints);
-
+        // Add Atributo jScrollPaneDeJTextArea con sus Constraints
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 2;
+        gridBagConstraints.gridheight = 5;
         gridBagConstraints.weightx = 1.0;
-        this.add(this.jPanelBotonesLatera2, gridBagConstraints);
+        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.fill = GridBagConstraints.BOTH;
+        this.add(this.jScrollPaneDeJTextArea, gridBagConstraints);
+
+
+
+        // Add Atributo jTextFieldInputs con sus Constraints
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 1;
+        gridBagConstraints.gridheight = 1;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 0.0;
+        gridBagConstraints.fill = GridBagConstraints.HORIZONTAL;
+        this.add(this.jTextFieldInputs, gridBagConstraints);
+
+
+
+        // Add Atributo jButtonUpdateJTextArea con sus Constraints
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.gridwidth = 1;
+        gridBagConstraints.gridheight = 1;
+        gridBagConstraints.weightx = 0.0;
+        gridBagConstraints.weighty = 0.0;
+        gridBagConstraints.fill = GridBagConstraints.NONE;
+        this.add(this.jButtonUpdateJTextArea, gridBagConstraints);
+
+
+
+        // Add botones laterales al atributo jPanelBotonesLateral con sus Constraints
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 1;
+        gridBagConstraints.gridheight = 1;
+        gridBagConstraints.weightx = 1.0;
+        gridBagConstraints.weighty = 1.0;
+        gridBagConstraints.fill = GridBagConstraints.BOTH;
+        gridBagConstraints.insets = new Insets(3,3,3,3);
+        jPanelBotonesLateral.add(jButtonLateral1, gridBagConstraints);
+
+        gridBagConstraints.gridy = 1;
+        jPanelBotonesLateral.add(jButtonLateral2, gridBagConstraints);
+        gridBagConstraints.gridy = 2;
+        jPanelBotonesLateral.add(jButtonLateral3, gridBagConstraints);
+        gridBagConstraints.gridy = 3;
+        jPanelBotonesLateral.add(jButtonLateral4, gridBagConstraints);
+
+        // Vuelvo a dejar el valor en "default"
+        gridBagConstraints.insets = new Insets(0,0,0,0);
+
+
+
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 0;
+        gridBagConstraints.gridwidth = 1;
+        gridBagConstraints.gridheight = 5;
+        gridBagConstraints.weightx = 0.2;
+        gridBagConstraints.weighty = 0.2;
+        gridBagConstraints.fill = GridBagConstraints.BOTH;
+
+        this.add(jPanelBotonesLateral, gridBagConstraints);
+
 
     }
 
+
+
+
+
     /**
-     * ! Se ejecutará cuando se detecte un Evento, se tendrá que identificar el
-     * elemento mediante condiciones
+     * ! Añade Listeners a los elemenos necesarios del panel
+     */
+    public void addListeners() {
+
+        // Botón de "Enviar" e imprimir el texto
+        this.jButtonUpdateJTextArea.addActionListener(this);
+    }
+
+
+
+
+
+    /**
+     * ! Se ejecutará cuando se detecte un Evento, se tendrá que identificar el elemento mediante condiciones
      * 
      * @param e The event that occurred.
      */
@@ -143,6 +225,11 @@ public class VentanaResponsiveGridBagLayout2 extends JFrame implements ActionLis
             this.jTextFieldInputs.setText("");
         }
     }
+
+
+
+
+
 
     public static void main(String[] args) {
         VentanaResponsiveGridBagLayout2 ventanaResponsiveGridBagLayout = new VentanaResponsiveGridBagLayout2();

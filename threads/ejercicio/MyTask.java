@@ -29,7 +29,6 @@ public class MyTask {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            ;
         }
 
         return this.contador.mostrar();
