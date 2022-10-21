@@ -1,3 +1,4 @@
+package ejerciciosprimerdia;
 import java.util.Scanner;
 
 // ! PEDIR AL USUARIO 1 NÚMERO Y SUMAR CADA NÚMERO DESDE ESTE HASTA 1 [5 --> 5+4+3+2+1 = 15]

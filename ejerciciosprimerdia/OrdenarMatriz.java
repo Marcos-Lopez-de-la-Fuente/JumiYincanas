@@ -1,3 +1,4 @@
+package ejerciciosprimerdia;
 
 // ! CREAR UNA MATRIZ DE 2 DIMENSIONES CON 10 NÚMEROS EN CADA DIMENSIÓN Y ORDENARLOS
 public class OrdenarMatriz {

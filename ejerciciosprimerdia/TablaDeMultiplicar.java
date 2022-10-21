@@ -1,3 +1,4 @@
+package ejerciciosprimerdia;
 
 // ! IMPRIMIR LA TABLA DE MULTIPLICAR DESDE EL 1 HASTA EL 15
 public class TablaDeMultiplicar {

@@ -1,3 +1,4 @@
+package ejerciciosprimerdia;
 import java.util.Random;
 
 // ! CREAR UN ARRAY CON 100 NÚMEROS ALEATORIOS Y ORDENARLOS

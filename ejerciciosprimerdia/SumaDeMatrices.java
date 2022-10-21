@@ -1,3 +1,4 @@
+package ejerciciosprimerdia;
 import java.util.Scanner;
 
 // ! PREGUNTAR AL USUARIO LAS DIMENSIONES DE 2 MATRICES, CREARLAS, SUMARLAS Y CREAR UNA TERCERA MATRIZ
