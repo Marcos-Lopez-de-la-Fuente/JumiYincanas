@@ -17,6 +17,7 @@ import javax.swing.JTextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+// ! Ejes X e Y básico
 public class GridBagLayout3 extends JFrame {
 
     // ! Atributos
@@ -59,8 +60,8 @@ public class GridBagLayout3 extends JFrame {
 
         // jLabels
 
-        this.addJLabel(this.jLabelsTop, 10);
-        this.addJLabel(this.jLabelsBottom, 10);
+        this.addJLabel(this.jLabelsTop, 12);
+        this.addJLabel(this.jLabelsBottom, 12);
 
     }
 
@@ -76,7 +77,7 @@ public class GridBagLayout3 extends JFrame {
         this.add(this.jLabelTopBottom0, gridBagConstraints);
 
         // jLabelsTop and Bottom
-        for (int i = 1; i < 9; i++) {
+        for (int i = 1; i < 11; i++) {
             this.addJLabelWithConstraintsHorizontalOrVertical(this.jLabelsTop.get(i), i, 0);
             this.addJLabelWithConstraintsHorizontalOrVertical(this.jLabelsBottom.get(i), 0, i);
         }
@@ -93,6 +94,8 @@ public class GridBagLayout3 extends JFrame {
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridx = positionX;
         gridBagConstraints.gridy = positionY;
+        gridBagConstraints.weightx = 1;
+        gridBagConstraints.weighty = 1;
 
         this.add(jLabels, gridBagConstraints);
     }
