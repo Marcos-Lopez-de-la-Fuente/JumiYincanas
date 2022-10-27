@@ -1,4 +1,4 @@
-package layouts.ejercicios;
+package layouts.explicacionaddimagenes;
 
 import java.awt.Canvas;
 import java.awt.image.BufferedImage;
@@ -18,7 +18,7 @@ public class Viewer extends Canvas {
         // Cargar una imagen del disco
         try {
             this.bufferedImage = ImageIO.read(new File(
-                    "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\layouts\\ejercicios\\imagen.jpeg"));
+                    "C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\layouts\\explicacionaddimagenes\\imagen.jpeg"));
 
         } catch (IOException e) {
             System.out.println("Img Error");

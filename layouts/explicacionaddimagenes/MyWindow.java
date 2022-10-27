@@ -1,4 +1,4 @@
-package layouts.ejercicios;
+package layouts.explicacionaddimagenes;
 
 import java.awt.GridBagLayout;
 import java.awt.Container;
@@ -7,19 +7,17 @@ import java.awt.GridBagConstraints;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-public class EjercicioDeHoy extends JFrame {
+public class MyWindow extends JFrame {
 
     // ! Atributos
     private Viewer viewer;
-    private JButton button;
 
     // ! Constructor
-    public EjercicioDeHoy() {
+    public MyWindow() {
         super("EjercicioDeHoy");
 
         this.createFrame();
 
-        // this.addElementsWithConstraints();
 
     }
 
@@ -27,19 +25,17 @@ public class EjercicioDeHoy extends JFrame {
         this.setSize(500, 500);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new GridBagLayout());
-        
+
         //////////////////////////////////////////////////
 
         Container panel = this.getContentPane();
 
 
 
-        
-        
         this.viewer = new Viewer();
-        
-        
-        
+
+
+
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.fill = GridBagConstraints.BOTH;
         gridBagConstraints.gridx = 0;
@@ -47,11 +43,11 @@ public class EjercicioDeHoy extends JFrame {
         gridBagConstraints.weightx = 1;
         gridBagConstraints.weighty = 1;
         panel.add(this.viewer, gridBagConstraints);
-        
-        
+
+
         this.setVisible(true);
         this.viewer.paintBackground();
-        
+
     }
 
     public void addElementsWithConstraints() {
@@ -64,7 +60,7 @@ public class EjercicioDeHoy extends JFrame {
     }
 
     public static void main(String[] args) {
-        EjercicioDeHoy ejercicioDeHoy = new EjercicioDeHoy();
+        MyWindow myWindow = new MyWindow();
 
     }
 }
