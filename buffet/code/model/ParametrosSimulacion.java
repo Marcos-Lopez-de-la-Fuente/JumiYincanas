@@ -1,5 +1,7 @@
 package buffet.code.model;
 
+
+// ! Añadir final a los atributos
 public class ParametrosSimulacion {
     public int minTiempoCoccion;
     public int maxTiempoCoccion;

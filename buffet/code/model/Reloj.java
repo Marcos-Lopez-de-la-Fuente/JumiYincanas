@@ -21,7 +21,7 @@ public class Reloj implements Runnable {
     }
 
     public int minutosEnMilisegundos(int minutos) {
-        return minutos * 60000 / this.getMultiplicadorDeTiempo();
+        return minutos * 60000;
     }
 
     public int getIntervaloEnMinutos(int minuto) {
@@ -33,11 +33,10 @@ public class Reloj implements Runnable {
         while (true) {
             try {
                 Thread.sleep(60000 / this.getMultiplicadorDeTiempo());
-                this.setMinutoActual(this.getMinutoActual() + 1);
-
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            this.setMinutoActual(this.getMinutoActual() + 1);
         }
     }
 
