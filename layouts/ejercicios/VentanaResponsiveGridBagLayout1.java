@@ -197,7 +197,7 @@ public class VentanaResponsiveGridBagLayout1 extends JFrame implements ActionLis
 
 
     /**
-     * ! Añade Listeners a los elemenos necesarios del panel
+     * ! Añade Listeners a los elementos necesarios del panel
      */
     public void addListeners() {
 

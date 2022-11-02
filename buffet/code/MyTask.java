@@ -1,6 +1,5 @@
 package buffet.code;
 
-import buffet.code.model.ParametrosSimulacion;
 import buffet.code.model.RestauranteModelo;
 
 public class MyTask {

@@ -16,22 +16,6 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.GridBagConstraints;
-import java.awt.Dimension;
-import java.awt.GridBagLayout;
-import java.awt.Insets;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-
-import layouts.tests.GridBagLayoutDemo;
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 // ! Aplicar los ejes al programa base
 public class GridBagLayout4 extends JFrame implements ActionListener {
@@ -60,9 +44,6 @@ public class GridBagLayout4 extends JFrame implements ActionListener {
     // jScrollPaneBotonesLateral
     private final int WIDTHJSCROLLPANELLATERAL = 160;
     private final int HEIGHTJSCROLLPANELLATERAL = 1080;
-    // jButtonLateral(1-2-3-4)
-    private final int WIDTHJBOTONESLATERAL = 100;
-    private final int HEIGHTJBOTONESLATERAL = 40;
 
     ///////////////////////////////////////////////// 7
 
@@ -256,7 +237,7 @@ public class GridBagLayout4 extends JFrame implements ActionListener {
 
 
     /**
-     * ! Añade Listeners a los elemenos necesarios del panel
+     * ! Añade Listeners a los elementos necesarios del panel
      */
     public void addListeners() {
 

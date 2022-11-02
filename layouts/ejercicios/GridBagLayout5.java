@@ -44,9 +44,6 @@ public class GridBagLayout5 extends JFrame implements ActionListener {
     // jScrollPaneBotonesLateral
     private final int WIDTHJSCROLLPANELLATERAL = 160;
     private final int HEIGHTJSCROLLPANELLATERAL = 1080;
-    // jButtonLateral(1-2-3-4)
-    private final int WIDTHJBOTONESLATERAL = 100;
-    private final int HEIGHTJBOTONESLATERAL = 40;
 
     /////////////////////////////////////////////////
 
@@ -262,7 +259,7 @@ public class GridBagLayout5 extends JFrame implements ActionListener {
 
 
     /**
-     * ! Añade Listeners a los elemenos necesarios del panel
+     * ! Añade Listeners a los elementos necesarios del panel
      */
     public void addListeners() {
 

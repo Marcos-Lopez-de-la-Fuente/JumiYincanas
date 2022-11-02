@@ -4,7 +4,6 @@ import java.awt.GridBagLayout;
 import java.awt.Container;
 import java.awt.GridBagConstraints;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class MyWindow extends JFrame {
@@ -60,7 +59,7 @@ public class MyWindow extends JFrame {
     }
 
     public static void main(String[] args) {
-        MyWindow myWindow = new MyWindow();
+        new MyWindow();
 
     }
 }

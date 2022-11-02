@@ -1,21 +1,14 @@
 package layouts.ejercicios;
 
-import java.awt.Dimension;
+
 import java.awt.GridBagConstraints;
-
 import java.awt.GridBagLayout;
-import java.awt.Insets;
-import java.util.ArrayList;
 
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+
+import java.util.ArrayList;
+
 
 // ! Ejes X e Y básico
 public class GridBagLayout3 extends JFrame {
@@ -90,7 +83,8 @@ public class GridBagLayout3 extends JFrame {
         }
     }
 
-    public void addJLabelWithConstraintsHorizontalOrVertical(JLabel jLabels, int positionX, int positionY) {
+    public void addJLabelWithConstraintsHorizontalOrVertical(JLabel jLabels, int positionX,
+            int positionY) {
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.gridx = positionX;
         gridBagConstraints.gridy = positionY;
