@@ -1,4 +1,3 @@
-package layouts.explicacionaddimagenes;
 
 import java.awt.GridBagLayout;
 import java.awt.Container;
@@ -21,7 +20,7 @@ public class MyWindow extends JFrame {
     }
 
     public void createFrame() {
-        this.setSize(500, 500);
+        this.setSize(1920, 1080);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLayout(new GridBagLayout());
 
@@ -45,7 +44,8 @@ public class MyWindow extends JFrame {
 
 
         this.setVisible(true);
-        this.viewer.paintBackground();
+
+        new Thread(this.viewer).start();
 
     }
 
@@ -55,11 +55,6 @@ public class MyWindow extends JFrame {
 
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         this.add(this.viewer, gridBagConstraints);
-
-    }
-
-    public static void main(String[] args) {
-        MyWindow myWindow =  new MyWindow();
 
     }
 }

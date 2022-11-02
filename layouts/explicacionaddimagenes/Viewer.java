@@ -17,7 +17,7 @@ public class Viewer extends Canvas {
         // Cargar una imagen del disco
         try {
             this.bufferedImage = ImageIO.read(new File(
-                    "C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\layouts\\explicacionaddimagenes\\imagen.jpeg"));
+                    "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\layouts\\explicacionaddimagenes\\imagen.jpeg"));
 
         } catch (IOException e) {
             System.out.println("Img Error");
