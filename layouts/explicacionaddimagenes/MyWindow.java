@@ -59,7 +59,7 @@ public class MyWindow extends JFrame {
     }
 
     public static void main(String[] args) {
-        MyWindow myWindow =  new MyWindow();
+        new MyWindow();
 
     }
 }
