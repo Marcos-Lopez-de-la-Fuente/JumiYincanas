@@ -1,4 +1,4 @@
-package layouts.animacion;
+package layouts.animacion.conparpadeo;
 
 import java.awt.Canvas;
 import java.awt.image.BufferedImage;
@@ -17,8 +17,10 @@ public class Viewer extends Canvas implements Runnable {
     private BufferedImage fondo;
     private BufferedImage item;
 
-    private static final String PATHFONDO = "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\Jumi\\JumiYincanas\\layouts\\animacion\\fondo.jpg";
-    private static final String PATHITEM = "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\Jumi\\JumiYincanas\\layouts\\animacion\\imagen.jpeg";
+    private static final String PATHFONDO =
+            "C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\layouts\\animacion\\fondo.jpg";
+    private static final String PATHITEM =
+            "C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\layouts\\animacion\\imagen.jpeg";
 
     public Viewer() {
 
@@ -31,6 +33,7 @@ public class Viewer extends Canvas implements Runnable {
         } catch (IOException e) {
             System.out.println("Img Error");
         }
+
 
     }
 
@@ -46,9 +49,9 @@ public class Viewer extends Canvas implements Runnable {
 
     }
 
+
     @Override
-    public void paint(Graphics graphics) {
-    }
+    public void paint(Graphics graphics) {}
 
     @Override
     public void run() {

@@ -1,4 +1,4 @@
-package layouts.animacion;
+package layouts.animacion.sinparpadeo;
 
 import java.awt.GridBagLayout;
 import java.awt.Container;
@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 public class MyWindow extends JFrame {
 
     // ! Atributos
-    private OtherViewer viewer;
+    private Viewer viewer;
 
 
 
@@ -49,7 +49,7 @@ public class MyWindow extends JFrame {
     public void setViewer() {
         Container panel = this.getContentPane();
 
-        this.viewer = new OtherViewer();
+        this.viewer = new Viewer();
 
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.fill = GridBagConstraints.BOTH;
