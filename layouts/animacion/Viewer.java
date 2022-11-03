@@ -17,8 +17,8 @@ public class Viewer extends Canvas implements Runnable {
     private BufferedImage fondo;
     private BufferedImage item;
 
-    private static final String PATHFONDO = "C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\layouts\\animacion\\fondo.jpg";
-    private static final String PATHITEM = "C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\layouts\\animacion\\imagen.jpeg";
+    private static final String PATHFONDO = "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\Jumi\\JumiYincanas\\layouts\\animacion\\fondo.jpg";
+    private static final String PATHITEM = "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\Jumi\\JumiYincanas\\layouts\\animacion\\imagen.jpeg";
 
 
 
