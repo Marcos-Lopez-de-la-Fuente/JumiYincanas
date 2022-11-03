@@ -20,8 +20,6 @@ public class Viewer extends Canvas implements Runnable {
     private static final String PATHFONDO = "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\Jumi\\JumiYincanas\\layouts\\animacion\\fondo.jpg";
     private static final String PATHITEM = "C:\\Users\\marco\\Desktop\\Workspace\\DAM\\DAM2\\Jumi\\JumiYincanas\\layouts\\animacion\\imagen.jpeg";
 
-
-
     public Viewer() {
 
         // Cargar una imagen del disco
@@ -35,8 +33,6 @@ public class Viewer extends Canvas implements Runnable {
 
     }
 
-
-
     public void paintBackground(Graphics graphics) {
 
         if (graphics == null) {
@@ -49,33 +45,24 @@ public class Viewer extends Canvas implements Runnable {
 
     }
 
-
-
     @Override
     public void paint(Graphics graphics) {
-        this.paintBackground(graphics);
     }
-
 
     @Override
     public void run() {
-        
+
         while (true) {
 
-            // TODO Preguntar a Jumi porque es necesario poner esto para que no parpadee
             this.getGraphics();
 
-            // El método "repaint()" llamará al método "update()" y este llamará al método "paint()"
-            this.repaint();
+            this.paintBackground(getGraphics());
 
-
-
-            this.posicionX += 1;
-            this.posicionY += 1;
-
+            this.posicionX += 3;
+            this.posicionY += 3;
 
             try {
-                Thread.sleep(20);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
