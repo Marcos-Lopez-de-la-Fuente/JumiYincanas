@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 public class MyWindow extends JFrame {
 
     // ! Atributos
-    private Viewer viewer;
+    private OtherViewer viewer;
 
 
 
@@ -49,7 +49,7 @@ public class MyWindow extends JFrame {
     public void setViewer() {
         Container panel = this.getContentPane();
 
-        this.viewer = new Viewer();
+        this.viewer = new OtherViewer();
 
         GridBagConstraints gridBagConstraints = new GridBagConstraints();
         gridBagConstraints.fill = GridBagConstraints.BOTH;

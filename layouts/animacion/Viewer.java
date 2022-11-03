@@ -11,8 +11,8 @@ import javax.imageio.ImageIO;
 
 public class Viewer extends Canvas implements Runnable {
 
-    private int posicionX;
-    private int posicionY;
+    private int posicionX = 0;
+    private int posicionY = 0;
 
     private BufferedImage fondo;
     private BufferedImage item;
@@ -24,6 +24,7 @@ public class Viewer extends Canvas implements Runnable {
 
         // Cargar una imagen del disco
         try {
+
             this.fondo = ImageIO.read(new File(PATHFONDO));
             this.item = ImageIO.read(new File(PATHITEM));
 
@@ -54,15 +55,13 @@ public class Viewer extends Canvas implements Runnable {
 
         while (true) {
 
-            this.getGraphics();
-
             this.paintBackground(getGraphics());
 
-            this.posicionX += 3;
-            this.posicionY += 3;
+            this.posicionX += 1;
+            this.posicionY += 1;
 
             try {
-                Thread.sleep(100);
+                Thread.sleep(10);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
