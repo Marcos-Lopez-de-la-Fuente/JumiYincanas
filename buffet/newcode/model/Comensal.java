@@ -1,8 +1,14 @@
 package buffet.newcode.model;
 
+import java.util.Random;
+
+import buffet.newcode.dtos.EstadistiquesComensals;
+
 public class Comensal implements Runnable {
 
     // ! Atributos
+    private static EstadistiquesComensals estadistiques;
+
     private int platsMenjats;
     private int tempsMenjant;
     private int tempsTertulia;
@@ -25,12 +31,42 @@ public class Comensal implements Runnable {
 
     // ! Métodos
     public void menjar() {
+        this.setStatus(ComensalStatus.menjant);
+        Comensal.getEstadistiques().comensalsPerEstat[1]++;
+
+        Rango tempsConsumir = this.getRestaurantModel().getParametresSimulacio().tempsConsumir;
+
+        try {
+            Thread.sleep(new Random().nextInt(tempsConsumir.min, tempsConsumir.max));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        Comensal.getEstadistiques().comensalsPerEstat[1]--;
     }
 
     public void tertulia() {
+        this.setStatus(ComensalStatus.xerrant);
+        Comensal.getEstadistiques().comensalsPerEstat[2]++;
+
+        Rango tempsTertulia = this.getRestaurantModel().getParametresSimulacio().tempsTertulia;
+
+        try {
+            Thread.sleep(new Random().nextInt(tempsTertulia.min, tempsTertulia.max));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        Comensal.getEstadistiques().comensalsPerEstat[2]--;
     }
 
     public void agafarPlat() {
+        this.setStatus(ComensalStatus.agafantPlat);
+        Comensal.getEstadistiques().comensalsPerEstat[0]++;
+
+        this.getRestaurantModel().getRandomBuffete().retirarPlat();
+
+        Comensal.getEstadistiques().comensalsPerEstat[0]--;
     }
 
     // ! Run
@@ -135,6 +171,20 @@ public class Comensal implements Runnable {
      */
     public void setRellotge(Rellotge rellotge) {
         this.rellotge = rellotge;
+    }
+
+    /**
+     * @return the estadistiques
+     */
+    public static EstadistiquesComensals getEstadistiques() {
+        return estadistiques;
+    }
+
+    /**
+     * @param estadistiques the estadistiques to set
+     */
+    public static void setEstadistiques(EstadistiquesComensals estadistiques) {
+        Comensal.estadistiques = estadistiques;
     }
 
 }

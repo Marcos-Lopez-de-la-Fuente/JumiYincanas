@@ -3,6 +3,9 @@ package buffet.newcode.model;
 import java.util.ArrayList;
 import java.util.Random;
 
+import buffet.newcode.dtos.Estadistiques;
+import buffet.newcode.dtos.EstadistiquesBuffets;
+
 public class RestaurantModel {
 
     // ! Atributos
@@ -18,6 +21,9 @@ public class RestaurantModel {
     }
 
     // ! Métodos
+    public void play() {
+    }
+
     public void start() {
     }
 
@@ -27,8 +33,22 @@ public class RestaurantModel {
     public void pause() {
     }
 
-    public void getEstadistiques() {
+    public Estadistiques getEstadistiques() {
+        return new Estadistiques();
     }
+
+    public void setParametresSimulacio(int maxPlatAreaBuffet, int limitPlatsEnCoa, int minTempsConsumir,
+            int maxTempsConsumir, int minTempsCoccio, int maxTempsCoccio, int minNumComensal, int maxNumComensal,
+            int minTempsTertulia, int maxTempsTertulia, int minTempsDescans, int maxTempsDescans,
+            int minNumChefPerGrill, int maxNumChefPerGrill, int minTempsCuinant, int maxTempsCuinant) {
+
+        this.parametresSimulacio = new ParametresSimulacio(maxPlatAreaBuffet, limitPlatsEnCoa, minTempsConsumir,
+                maxTempsConsumir, minTempsCoccio, maxTempsCoccio, minNumComensal, maxNumComensal, minTempsTertulia,
+                maxTempsTertulia, minTempsDescans, maxTempsDescans, minNumChefPerGrill, maxNumChefPerGrill,
+                minTempsCuinant, maxTempsCuinant);
+    }
+
+
 
     // ! Getters y Setters
     /**
@@ -59,11 +79,13 @@ public class RestaurantModel {
     /**
      * @param areaBuffets the areaBuffets to set
      */
-    public void setAreaBuffets(int capacitatMaxima, String descripcio) {
+    public void setAreaBuffets(int capacitatMaxima, String descripcio, Integer[] platsPerAreaBuffet,
+            Integer[] platsEnColaPerAreaBuffet, int capacitatMaximaColaPlatCuinats) {
+
         this.areaBuffets = new AreaBuffet[3];
 
         for (AreaBuffet areaBuffet : this.areaBuffets) {
-            areaBuffet = new AreaBuffet(capacitatMaxima, descripcio);
+            areaBuffet = new AreaBuffet(capacitatMaxima, descripcio, capacitatMaximaColaPlatCuinats);
         }
     }
 
@@ -88,21 +110,7 @@ public class RestaurantModel {
         return parametresSimulacio;
     }
 
-    /**
-     * @param parametresSimulacio the parametresSimulacio to set
-     */
-    public void setParametresSimulacio(int maxPlatAreaBuffet, int limitPlatsEnCoa, int minTempsConsumir,
-            int maxTempsConsumir,
-            int minTempsCoccio, int maxTempsCoccio, int minNumChef, int maxNumChef, int minNumComensal,
-            int maxNumComensal, int minTempsTertulia, int maxTempsTertulia, int minTempsDescans, int maxTempsDescans,
-            int minNumChefPerGrill, int maxNumChefPerGrill, int minTempsCuinant, int maxTempsCuinant) {
-
-        this.parametresSimulacio = new ParametresSimulacio(maxPlatAreaBuffet, limitPlatsEnCoa, minTempsConsumir,
-                maxTempsConsumir,
-                minTempsCoccio, maxTempsCoccio, minNumChef, maxNumChef, minNumComensal,
-                maxNumComensal, minTempsTertulia, maxTempsTertulia, minTempsDescans, maxTempsDescans,
-                minNumChefPerGrill, maxNumChefPerGrill, minTempsCuinant, maxTempsCuinant);
-    }
+    
 
     /**
      * @return the chefs
@@ -153,6 +161,11 @@ public class RestaurantModel {
         for (int i = 0; i < finalNumComensal; i++) {
             this.comensals.add(new Comensal(this, this.getRellotge()));
         }
+    }
+
+    public AreaBuffet getRandomBuffete() {
+
+        return new AreaBuffet(0, null, 0);
     }
 
 }

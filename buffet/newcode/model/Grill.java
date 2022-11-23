@@ -1,12 +1,12 @@
 package buffet.newcode.model;
 
-public class Grill extends BuffetPlats {
+public class Grill extends BufferPlats {
 
     // ! Atributos
     private boolean enServei;
 
     private RestaurantModel restaurantModel;
-    private BuffetPlats colaPlatCuinats;
+    private BufferPlats colaPlatCuinats;
 
     // ! Constructor
     public Grill(int capacitatMaxima, RestaurantModel restaurantModel) {
@@ -15,6 +15,16 @@ public class Grill extends BuffetPlats {
 
         this.setRestaurantModel(restaurantModel);
     }
+
+    public synchronized void posarEnServei() {
+        this.setEnServei(true);
+    }
+
+    public synchronized void treureDeServei() {
+        this.setEnServei(false);
+    }
+
+
 
     // ! Getters y Setters
     /**
@@ -27,14 +37,14 @@ public class Grill extends BuffetPlats {
     /**
      * @param enServei the enServei to set
      */
-    public synchronized void setEnServei(boolean enServei) {
+    public void setEnServei(boolean enServei) {
         this.enServei = enServei;
     }
 
     /**
      * @return the colaPlatCuinats
      */
-    public BuffetPlats getColaPlatCuinats() {
+    public BufferPlats getColaPlatCuinats() {
         return colaPlatCuinats;
     }
 
@@ -42,7 +52,7 @@ public class Grill extends BuffetPlats {
      * @param colaPlatCuinats the colaPlatCuinats to set
      */
     public void setColaPlatCuinats(int capacitatMaxima) {
-        this.colaPlatCuinats = new BuffetPlats(capacitatMaxima);
+        this.colaPlatCuinats = new BufferPlats(capacitatMaxima);
     }
 
     /**

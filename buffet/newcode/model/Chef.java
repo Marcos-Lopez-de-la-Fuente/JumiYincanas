@@ -2,15 +2,19 @@ package buffet.newcode.model;
 
 import java.util.Random;
 
+import buffet.newcode.dtos.EstadistiquesChef;
+
 public class Chef implements Runnable {
 
     // ! Atributos
+    private static EstadistiquesChef estadistiques;
+
     private int tempsTotalCuinant;
     private int tempsNoDescans;
-    private int nombrePlatsCuinats;
     private int horariIniciDescans;
     private int tempsTotalDescans;
     private int tempsEspera;
+    private int nombrePlatsCuinats;
     private ChefStatus status;
 
     private RestaurantModel restaurantModel;
@@ -33,10 +37,11 @@ public class Chef implements Runnable {
         this.setGrill(grill);
     }
 
-
     // ! Métodos
     public void cocinar() {
         this.setStatus(ChefStatus.cuinant);
+        Chef.getEstadistiques().chefsPerEstat[0]++;
+
         this.getGrill().afegirPlat();
 
         Rango tempsCoccio = this.getRestaurantModel().getParametresSimulacio().tempsCoccio;
@@ -47,10 +52,13 @@ public class Chef implements Runnable {
         }
 
         this.getGrill().retirarPlat();
+
+        Chef.getEstadistiques().chefsPerEstat[0]--;
     }
 
     public void descansar() {
         this.setStatus(ChefStatus.descansant);
+        Chef.getEstadistiques().chefsPerEstat[2]++;
 
         Rango tempsDescans = this.getRestaurantModel().getParametresSimulacio().tempsDescans;
         try {
@@ -58,24 +66,25 @@ public class Chef implements Runnable {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        Chef.getEstadistiques().chefsPerEstat[2]--;
     }
 
     public void entregarPlat() {
         this.setStatus(ChefStatus.entregant);
-        this.getAreaBuffet().afegirPlat();
-    }
+        Chef.getEstadistiques().chefsPerEstat[1]++;
 
+        this.getAreaBuffet().afegirPlat();
+
+        Chef.getEstadistiques().chefsPerEstat[1]--;
+    }
 
     // ! Run
     @Override
     public void run() {
-        
+
         // TODO Auto-generated method stub
     }
-
-
-
-
 
     // ! Getters y Setters
     /**
@@ -232,6 +241,18 @@ public class Chef implements Runnable {
         this.grill = grill;
     }
 
-    
+    /**
+     * @return the estadistiques
+     */
+    public static EstadistiquesChef getEstadistiques() {
+        return estadistiques;
+    }
+
+    /**
+     * @param estadistiques the estadistiques to set
+     */
+    public static void setEstadistiques(EstadistiquesChef estadistiques) {
+        Chef.estadistiques = estadistiques;
+    }
 
 }

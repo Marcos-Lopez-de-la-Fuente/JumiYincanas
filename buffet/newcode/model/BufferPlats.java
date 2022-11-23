@@ -1,13 +1,13 @@
 package buffet.newcode.model;
 
-public class BuffetPlats {
+public class BufferPlats {
 
     // ! Atributos
     private int capacitatMaxima;
     private int quantitatActual;
 
     // ! Constructor
-    public BuffetPlats(int capacitatMaxima) {
+    public BufferPlats(int capacitatMaxima) {
         this.setCapacitatMaxima(capacitatMaxima);
         this.setQuantitatActual(0);
     }

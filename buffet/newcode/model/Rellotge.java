@@ -1,6 +1,6 @@
 package buffet.newcode.model;
 
-public class Rellotge implements Runnable {
+public class Rellotge implements Runnable { // ! Diría que está acabado
 
     // ! Atributos
     private static Rellotge rellotge;
