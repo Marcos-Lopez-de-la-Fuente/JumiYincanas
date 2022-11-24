@@ -18,9 +18,9 @@ public class Viewer extends Canvas implements Runnable {
     private BufferedImage item;
 
     private static final String PATHFONDO =
-            "C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\layouts\\animacion\\fondo.jpg";
+            "./layouts/animacion/fondo.jpg";
     private static final String PATHITEM =
-            "C:\\Users\\monoq\\Desktop\\Workspace\\DAM\\DAM2\\JumiYincanas\\layouts\\animacion\\imagen.jpeg";
+            "./layouts/animacion/imagen.jpeg";
 
     public Viewer() {
 
@@ -64,7 +64,7 @@ public class Viewer extends Canvas implements Runnable {
             this.posicionY += 1;
 
             try {
-                Thread.sleep(10);
+                Thread.sleep(50);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
